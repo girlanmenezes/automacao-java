@@ -15,6 +15,7 @@ public class ClientSteps {
 	@Dado("^que eu esteja na tela de login$")
 	public void que_eu_esteja_na_tela_de_login() throws Throwable {
 		System.out.println("Pendente de implemesssssssssntar");
+		System.out.println("Pendente de implemesssssssssntar");
 	}
 	
 	@Quando("^preencher o campo usuario \"([^\"]*)\" e senha \"([^\"]*)\" e clicar no botao entrar$")

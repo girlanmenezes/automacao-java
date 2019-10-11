@@ -19,7 +19,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 2518011386,
+  "duration": 2589610866,
   "status": "passed"
 });
 formatter.scenario({
@@ -49,7 +49,7 @@ formatter.match({
   "location": "ClientSteps.que_eu_esteja_na_tela_de_login()"
 });
 formatter.result({
-  "duration": 80258386,
+  "duration": 101808435,
   "status": "passed"
 });
 formatter.match({
@@ -66,18 +66,18 @@ formatter.match({
   "location": "ClientSteps.preencher_o_campo_usuario_e_senha_e_clicar_no_botao_entrar(String,String)"
 });
 formatter.result({
-  "duration": 235724976,
+  "duration": 208468747,
   "status": "passed"
 });
 formatter.match({
   "location": "ClientSteps.o_sistema_realiza_login_e_apresenta_a_tela_inicial()"
 });
 formatter.result({
-  "duration": 2932847,
+  "duration": 2843635,
   "status": "passed"
 });
 formatter.after({
-  "duration": 857528312,
+  "duration": 886671086,
   "status": "passed"
 });
 });
