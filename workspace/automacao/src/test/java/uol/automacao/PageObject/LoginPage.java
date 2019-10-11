@@ -1,14 +1,13 @@
 package uol.automacao.PageObject;
 
 import org.openqa.selenium.support.PageFactory;
-
 import uol.automacao.BaseTest;
 
-public class ClientePage extends ClienteElementMap {
+public class LoginPage extends LoginElementMap {
 	
 	
 
-	public ClientePage() {
+	public LoginPage() {
 		PageFactory.initElements(BaseTest.getDriver(), this);
 	}
 
@@ -16,6 +15,12 @@ public class ClientePage extends ClienteElementMap {
 		username.sendKeys(usuario);
 		password.sendKeys(senha);
 		btnEntrar.click();
+	}
+	
+	
+	public void ValidaLogin() {
+		BaseTest.waitForVisibility(logopublicador);
+
 	}
 
 }

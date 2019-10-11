@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Cliente.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Login.feature");
 formatter.feature({
   "comments": [
     {
@@ -19,7 +19,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 2589610866,
+  "duration": 2409433983,
   "status": "passed"
 });
 formatter.scenario({
@@ -46,10 +46,10 @@ formatter.step({
   "keyword": "Entao "
 });
 formatter.match({
-  "location": "ClientSteps.que_eu_esteja_na_tela_de_login()"
+  "location": "LoginSteps.que_eu_esteja_na_tela_de_login()"
 });
 formatter.result({
-  "duration": 101808435,
+  "duration": 68033422,
   "status": "passed"
 });
 formatter.match({
@@ -63,21 +63,21 @@ formatter.match({
       "offset": 50
     }
   ],
-  "location": "ClientSteps.preencher_o_campo_usuario_e_senha_e_clicar_no_botao_entrar(String,String)"
+  "location": "LoginSteps.preencher_o_campo_usuario_e_senha_e_clicar_no_botao_entrar(String,String)"
 });
 formatter.result({
-  "duration": 208468747,
+  "duration": 195474330,
   "status": "passed"
 });
 formatter.match({
-  "location": "ClientSteps.o_sistema_realiza_login_e_apresenta_a_tela_inicial()"
+  "location": "LoginSteps.o_sistema_realiza_login_e_apresenta_a_tela_inicial()"
 });
 formatter.result({
-  "duration": 2843635,
+  "duration": 450891903,
   "status": "passed"
 });
 formatter.after({
-  "duration": 886671086,
+  "duration": 936417001,
   "status": "passed"
 });
 });
