@@ -1,26 +1,30 @@
 package uol.automacao;
 
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.text.Normalizer;
 import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import junit.framework.Assert;
-//import gherkin.formatter.model.Scenario;
 import cucumber.api.Scenario;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
  
 public class BaseTest {
@@ -92,8 +96,7 @@ public class BaseTest {
     
     
     //Metodos auxiliares
-    
-    public String formataString(String str) {
+	public String formataString(String str) {
     	str = Normalizer.normalize(str, Normalizer.Form.NFD);
     	str = str.replaceAll("-", " ").replaceAll(";", ": ");
     	str = str.substring(0,1).toUpperCase() + str.substring(1);
@@ -105,6 +108,25 @@ public class BaseTest {
         new WebDriverWait(driver, 30)
              .until(ExpectedConditions.visibilityOf(element));
  }
+    
+    
+    public static String inputStreamToString(InputStream inputStream) {
+        final int bufferSize = 8 * 1024;
+        byte[] buffer = new byte[bufferSize];
+        final StringBuilder builder = new StringBuilder();
+        try (BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream, bufferSize)) {
+            while (bufferedInputStream.read(buffer) != -1) {
+                builder.append(new String(buffer));
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(BaseTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return builder.toString();
+    }
+
+    public static void consumeInputStream(InputStream inputStream) {
+        inputStreamToString(inputStream);
+    }
  
     /*Click Method
     public void click (By elementBy) {
