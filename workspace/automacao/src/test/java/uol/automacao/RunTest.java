@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/java/feature/",
-glue = { "" }, plugin ={"pretty" , "html:Folder_Name"}, monochrome = true, dryRun = false, tags = "@login")
+glue = { "" }, plugin ={"pretty" , "html:Folder_Name"}, monochrome = true, dryRun = false, tags = "@noticia")
 public class RunTest {
 
 }

@@ -7,6 +7,8 @@ import java.text.Normalizer;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import cucumber.api.java.After;
@@ -88,8 +90,8 @@ public class BaseTest {
     	}
     	
     	if(driver !=null) {
-    		driver.close();
-    		driver.quit();
+    		//driver.close();
+    		//driver.quit();
     	}
     	
     }
@@ -126,6 +128,13 @@ public class BaseTest {
 
     public static void consumeInputStream(InputStream inputStream) {
         inputStreamToString(inputStream);
+    }
+    
+
+    public void teste() throws InterruptedException {
+    	Thread.sleep(1000);
+    	JavascriptExecutor js = (JavascriptExecutor) driver;
+    	js.executeScript("CKEDITOR.instances.noticia_conteudo_texto.setData( '<p>This is a new paragraph.</p>' );");
     }
  
     /*Click Method

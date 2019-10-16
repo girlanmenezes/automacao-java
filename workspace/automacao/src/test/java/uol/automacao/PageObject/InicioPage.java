@@ -8,9 +8,14 @@ public class InicioPage extends InicioElementMap {
 		PageFactory.initElements(BaseTest.getDriver(), this);
 	}
 	
-	public void navegarNoticiasEditoria() {
+	public void navegarTodosNoticias() {
 		news.click();
-		editorialReferencia.click();
+		newsTodos.click();
+	}
+	
+	public void adicionar() {
+		adicionar.click();
 	}
 
+	
 }
